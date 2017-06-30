@@ -110,6 +110,8 @@ class Nutralife_Products {
 		require NTLFP_INCLUDES .'/cpt.php';
 		require NTLFP_INCLUDES .'/metas.php';
 		require NTLFP_INCLUDES .'/class-product.php';
+		require NTLFP_INCLUDES .'/class-settings-api.php';
+		require NTLFP_INCLUDES .'/class-settings.php';
 	}
 
 

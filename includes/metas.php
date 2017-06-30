@@ -1,7 +1,7 @@
 <?php
 
-add_filter('cmb2-taxonomy_meta_boxes', 'cmb2_taxonomy_sample_metaboxes');
-function cmb2_taxonomy_sample_metaboxes( array $meta_boxes ) {
+add_filter('cmb2-taxonomy_meta_boxes', 'nutralife_tax_meta');
+function nutralife_tax_meta( array $meta_boxes ) {
 
 	$style = true;
 	if(isset($_GET['taxonomy'])){
@@ -25,6 +25,12 @@ function cmb2_taxonomy_sample_metaboxes( array $meta_boxes ) {
 				'desc'       => __( 'Enter a hero title here fo display on the on this taxonomy page, otherwise the main taxonomy name will be displayed', 'cmb2' ),
 				'id'         => 'hero_title',
 				'type'       => 'text'
+			),
+			array(
+				'name' => __( 'Taxonomy Thumbnail', 'cmb2' ),
+				'desc' => __( 'This image will be shown as the image of the category in popular category section.', 'cmb2' ),
+				'id'   => 'hero_image',
+				'type' => 'file',
 			),
 			array(
 				'name' => __( 'Hero Image', 'cmb2' ),
@@ -65,11 +71,11 @@ function cmb2_taxonomy_sample_metaboxes( array $meta_boxes ) {
 
 
 
-add_action( 'cmb2_admin_init', 'yourprefix_register_demo_metabox' );
+add_action( 'cmb2_admin_init', 'nutralife_product_meta' );
 /**
  * Hook in and add a demo metabox. Can only happen on the 'cmb2_admin_init' or 'cmb2_init' hook.
  */
-function yourprefix_register_demo_metabox() {
+function nutralife_product_meta() {
 	$style = true;
 	if(isset($_GET['taxonomy'])){
 		$style = false;
@@ -89,7 +95,7 @@ function yourprefix_register_demo_metabox() {
 
 	$metabox->add_field( array(
 		'name' => esc_html__( 'Buy Now Link', 'cmb2' ),
-		'desc' => esc_html__( 'Add a link to an offpage estore to display a Buy Now button on the product page', 'cmb2' ),
+		'desc' => esc_html__( 'Add a link to an off page store to display a Buy Now button on the product page', 'cmb2' ),
 		'id'   => 'buy_link',
 		'type' => 'text_url',
 		 'protocols' => array('http', 'https'), // Array of allowed protocols
@@ -134,5 +140,13 @@ function yourprefix_register_demo_metabox() {
 		'desc' => __( 'This image is shown on top of the product page if banner type is selected as image', 'cmb2' ),
 		'id'   => 'banner_image',
 		'type' => 'file',
+	) );
+	$metabox->add_field( array(
+		'name' => esc_html__( 'Revolusion slide alias', 'cmb2' ),
+		'desc' => esc_html__( 'Add a revolution slider alias to show on  the product page', 'cmb2' ),
+		'id'   => 'slider_alias',
+		'type' => 'text',
+//		'protocols' => array('http', 'https'), // Array of allowed protocols
+//		 'repeatable' => true,
 	) );
 }

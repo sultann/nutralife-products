@@ -21,7 +21,9 @@ class Product{
 	public $breadcrumb;
 	public $related_products;
 	public $related_blogs;
+	public $buy_link;
 	private $post;
+
 
 	/**
 	 * Product constructor.
@@ -57,6 +59,7 @@ class Product{
 		$this->heal_concerns = $this->get_heal_concerns();
 		$this->external_sources = $this->get_external_sources();
 		$this->related_products = $this->get_related_products();
+		$this->buy_link = $this->get_buy_link();
 	}
 
 
@@ -117,7 +120,7 @@ class Product{
 		return $banner_image;
 	}
 	protected function get_slider(){
-		$slider = get_post_meta($this->ID, 'slide_template', true);
+		$slider = get_post_meta($this->ID, 'slider_alias', true);
 		if(trim($slider) == ''){
 			return false;
 		}
@@ -150,7 +153,13 @@ class Product{
 		}
 		return false;
 	}
-	protected function get_breadcrumb(){}
+	protected function get_buy_link(){
+		$buy_link = get_post_meta($this->ID, 'buy_link', true);
+		if(trim($buy_link) == ''){
+			return false;
+		}
+		return $buy_link;
+	}
 	protected function get_external_sources(){
 		$external_sources = get_post_meta($this->ID, 'external_sources', true);
 		if(is_array($external_sources) && !empty($external_sources)){

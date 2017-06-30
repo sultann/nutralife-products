@@ -77,7 +77,7 @@ function nutralife_create_taxonomies() {
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'product-categories' ),
 	);
-	register_taxonomy( 'product_cats', array( 'product' ), $args );
+	register_taxonomy( 'product_cats', array( 'product', 'post' ), $args );
 
 	$labels = array(
 		'name'              => _x( 'Product Ingredients', 'taxonomy general name', 'nutralife_products' ),
@@ -101,7 +101,7 @@ function nutralife_create_taxonomies() {
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'ingredient' ),
 	);
-	register_taxonomy( 'ingredient', array( 'product' ), $args );
+	register_taxonomy( 'ingredient', array( 'product', 'post' ), $args );
 
 	$labels = array(
 		'name'              => _x( 'Health Concern', 'taxonomy general name', 'nutralife_products' ),
@@ -125,5 +125,5 @@ function nutralife_create_taxonomies() {
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'health-concern' ),
 	);
-	register_taxonomy( 'health_concern', array( 'product' ), $args );
+	register_taxonomy( 'health_concern', array( 'product', 'post' ), $args );
 }
