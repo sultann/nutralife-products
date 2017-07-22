@@ -32,6 +32,7 @@
 
 // don't call the file directly
 if ( !defined( 'ABSPATH' ) ) exit;
+
 /**
  * Main initiation class
  */
@@ -132,6 +133,7 @@ class Nutralife_Products {
 		define( 'NTLFP_VIEWS', NTLFP_PATH . '/views' );
 		define( 'NTLFP_LIBS', NTLFP_PATH . '/libs' );
 		define( 'NTLFP_TEMPLATES_DIR', NTLFP_PATH . '/templates' );
+		define( 'NTLFP_DEFAULT_THUMB', NTLFP_ASSETS .'/images/blank-bottle.png' );
 	}
 
 	

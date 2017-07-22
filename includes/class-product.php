@@ -81,13 +81,15 @@ class Product{
 		return false;
 	}
 
-
+	protected function get_default_image(){
+		return NTLFP_DEFAULT_THUMB;
+	}
 	public function get_thumbnail($size='large'){
 		if(has_post_thumbnail($this->ID)){
 			return get_the_post_thumbnail_url($this->ID, $size);
 		}
 
-		return false;
+		return $this->get_default_image();
 	}
 
 

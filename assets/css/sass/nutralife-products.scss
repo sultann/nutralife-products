@@ -55,10 +55,14 @@ $border_color:rgba(0, 0, 0, 0.08);
     text-transform: uppercase;
   }
 
+  .single-product-thumb{
+    width: 100% !important;
+    height: auto;
+  }
 
   &.product-loop{
     min-height: 400px;
-    background-color: #fff;
+    background-color: transparent !important;
     .product-media-title{
       font-size: 1em;
     }
@@ -77,22 +81,26 @@ $border_color:rgba(0, 0, 0, 0.08);
   }
 }
 
+
 .product-description{
+  color: $title_color !important;
   &>h2{
     margin-top: 0;
+    color: $title_color !important;
   }
   h2{
     font-size: 2em;
     font-weight: 400;
     text-transform: uppercase;
+    color: $title_color !important;
   }
   h3{
     font-size: 1.2em;
-    color: #000;
     line-height: 1.3em;
     padding: 0;
     margin: 20px 0 5px 0;
     text-transform: uppercase;
+    color: $title_color !important;
   }
 }
 
@@ -132,6 +140,7 @@ $border_color:rgba(0, 0, 0, 0.08);
   font-size: 2.2em;
   text-transform: uppercase;
   font-weight: 400;
+  color: $title_color;
 }
 
 .product-read-more-btn {
@@ -306,7 +315,7 @@ $border_color:rgba(0, 0, 0, 0.08);
 
     &:after{
       content: '';
-      border-top: 4px solid $main_color;
+      //border-top: 4px solid $main_color;
       position: absolute;
       bottom: -20px;
       width: 30%;
@@ -351,6 +360,104 @@ $border_color:rgba(0, 0, 0, 0.08);
   }
 
 }
+.taxonomy-meta-desc {
+  text-align: left;
+  a{
+    border: 1px solid #fff;
+    line-height: 1;
+    padding: 6px 30px;
+    margin: 10px 10px 10px 0;
+    display: inline-block;
+    color: #fff;
+    &:hover{
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+.blog-overlay {
+  background: rgba(00,00,00,.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#Top_bar.is-sticky{
+  z-index:999999 !important;
+}
+.tax-title-link{
+ text-align: center;
+  .tax-title{
+    font-size: 1.2em;
+    color: $main_color;
+    line-height: 1.3em;
+    font-weight: 600;
+    min-height: 42px;
+    text-transform: uppercase;
+  }
+  &:hover{
+    text-decoration: none;
+    color: $main_color;
+  }
+}
+.breadcrumbs-wrap{
+  .breadcrumbs{
+    margin-bottom: 30px;
+  }
+}
+.non-popular-tax-title-link{
+  font-size: 1em;
+  color: $main_color;
+  line-height: 1.1em;
+  font-weight: 600;
+  border: 1px solid $title_color;
+  padding: 5px 30px;
+  margin: 5px 4px;
+  display: inline-block;
+  text-transform: uppercase;
+  &:hover{
+    text-decoration: none;
+    color: $main_color;
+  }
+}
+.tax-image-link{
+  img{
+    max-height: 230px !important;
+    width: auto !important;
+  }
+}
+.nutralife-popular-taxonomy {
+  padding: 70px 0 0 0;
+  overflow: visible;
+}
+
+.popular-category-label {
+  position: absolute;
+  top: 0;
+  margin-left: -11px;
+  background: #cd171e;
+  padding: 10px 30px 10px 18px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3em;
+  &:after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 41px solid #fff;
+    border-left: 12px solid transparent;
+  }
+}
+
+
+.align_center{
+  text-align: center;
+}
 @media only screen and (min-width: 960px) {
   .no-gutter{
     .column{
@@ -378,5 +485,25 @@ $border_color:rgba(0, 0, 0, 0.08);
     }
     //&>.column{ padding-bottom: 99999px; margin-bottom: -99999px;}
 
+  }
+}
+
+.single-product-media.related-product{
+  .product-media-left, .product-media-right{
+    width: 100%;
+    float: none;
+    clear: both;
+    padding: 0 !important;
+  }
+  .single-product-thumb{
+    max-height: 250px;
+    width: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .product-media-title{
+    font-size: 1em;
+    line-height: 1.7em;
+    margin-top: 20px;
   }
 }
