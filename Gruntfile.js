@@ -24,6 +24,7 @@ module.exports = function(grunt) {
         },
             nutralife_products: {
                 src: [
+                    'assets/js/vendor/*.js',
                     'assets/js/src/nutralife-products.js'
                 ],
                     dest: 'assets/js/nutralife-products.js'

@@ -14,19 +14,19 @@ window.Nutralife_Products = (function(window, document, $, undefined){
 
 	var app = {};
 
+    $('#taxonomy-nav-menu').slicknav({
+        appendTo:$('.taxonomy-label-wrapper')
+    });
 	app.init = function() {
-
+        var winWidth = $(window).width();
+        if(winWidth>760){
+            var rightPanel = $('.double-cols-parent').find('.three-fourth').height();
+            // console.log(rightPanel);
+            // var height = $('.taxonomy-list-wrapper').closest('.column').outerHeight();
+            $('.taxonomy-list-wrapper').css('height', (rightPanel-20)+'px');
+        }
 	};
 
-	var winWidth = $(window).width();
-	if(winWidth>760){
-	    var rightPanel = $('.double-cols-parent').find('.three-fourth').height();
-	    // console.log(rightPanel);
-        // var height = $('.taxonomy-list-wrapper').closest('.column').outerHeight();
-        $('.taxonomy-list-wrapper').css('height', (rightPanel-20)+'px');
-        console.log(rightPanel);
-        console.log('worked');
-    }
 
 
 

@@ -76,16 +76,15 @@ function nutralife_get_non_popular_tax($tax='product_cats'){
 		'hide_empty' => false,
 	) );
 
-//		var_dump(count($categories));
-//	$result = array();
-//	foreach ( $categories as $term ) {
-//		$popular = get_term_meta($term->term_id, 'popular', true );
-////		if($popular == '1') continue;
+    $result = array();
+    foreach ( $categories as $term ) {
+        $popular = get_term_meta($term->term_id, 'popular', true );
+        if($popular == '1') continue;
 //		$order = get_term_meta($term->term_id, 'order', true );
-//		$result[$order] = $term;
-//	}
+        $result[] = $term;
+    }
 ////	ksort( $result, SORT_NUMERIC );
-	return $categories;
+    return $result;
 }
 
 
@@ -93,27 +92,3 @@ add_shortcode('nutralife_popular_taxonomy', 'nutralife_popular_taxonomy_callback
 function nutralife_popular_taxonomy_callback() {
 	include NTLFP_TEMPLATES_DIR .'/popular-taxonomy.php';
 }
-//add_action('pre_get_posts', 'sort_vendors_archive_loop');
-
-//$meta_query_args = array(
-//	'relation' => 'OR', // Optional, defaults to "AND"
-//	array(
-//		'key'     => '_my_custom_key',
-//		'value'   => 'Value I am looking for',
-//		'compare' => '='
-//	),
-//	array(
-//		'relation' => 'AND',
-//		array(
-//			'key'     => '_my_custom_key_2',
-//			'value'   => 'Value I am looking for 2',
-//			'compare' => '='
-//		),
-//		array(
-//			'key'     => '_my_custom_key_3',
-//			'value'   => 'Value I am looking for 3',
-//			'compare' => '='
-//		)
-//	)
-//);
-//$meta_query = new WP_Meta_Query( $meta_query_args );

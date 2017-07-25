@@ -39,7 +39,7 @@ function nutralife_custom_posts() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'product' ),
+		'rewrite'            => array( 'slug' => 'products' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -99,7 +99,7 @@ function nutralife_create_taxonomies() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'ingredient' ),
+		'rewrite'           => array( 'slug' => 'ingredients' ),
 	);
 	register_taxonomy( 'ingredient', array( 'product', 'post' ), $args );
 

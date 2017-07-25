@@ -1,3 +1,213 @@
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.10
+ * (c) 2016 Josh Cope
+ * licensed under MIT
+ */
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  line-height: 1.125em;
+  cursor: pointer;
+}
+
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+  margin-top: 0.188em;
+}
+
+.slicknav_menu {
+  *zoom: 1;
+}
+
+.slicknav_menu .slicknav_menutxt {
+  display: block;
+  line-height: 1.188em;
+  float: left;
+}
+
+.slicknav_menu .slicknav_icon {
+  float: left;
+  width: 1.125em;
+  height: 0.875em;
+  margin: 0.188em 0 0 0.438em;
+}
+
+.slicknav_menu .slicknav_icon:before {
+  background: transparent;
+  width: 1.125em;
+  height: 0.875em;
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.slicknav_menu .slicknav_no-text {
+  margin: 0;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+  display: block;
+  width: 1.125em;
+  height: 0.125em;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.slicknav_menu:before {
+  content: " ";
+  display: table;
+}
+
+.slicknav_menu:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.slicknav_nav {
+  clear: both;
+}
+
+.slicknav_nav ul {
+  display: block;
+}
+
+.slicknav_nav li {
+  display: block;
+}
+
+.slicknav_nav .slicknav_arrow {
+  font-size: 0.8em;
+  margin: 0 0 0 0.4em;
+}
+
+.slicknav_nav .slicknav_item {
+  cursor: pointer;
+}
+
+.slicknav_nav .slicknav_item a {
+  display: inline;
+}
+
+.slicknav_nav .slicknav_row {
+  display: block;
+}
+
+.slicknav_nav a {
+  display: block;
+}
+
+.slicknav_nav .slicknav_parent-link a {
+  display: inline;
+}
+
+.slicknav_brand {
+  float: left;
+}
+
+.slicknav_menu {
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #4c4c4c;
+  padding: 5px;
+}
+
+.slicknav_menu * {
+  box-sizing: border-box;
+}
+
+.slicknav_menu .slicknav_menutxt {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #000;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #fff;
+}
+
+.slicknav_btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #222;
+}
+
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+  list-style: none;
+  overflow: hidden;
+}
+
+.slicknav_nav ul {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 0 20px;
+}
+
+.slicknav_nav .slicknav_row {
+  padding: 5px 10px;
+  margin: 2px 5px;
+}
+
+.slicknav_nav .slicknav_row:hover {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #ccc;
+  color: #fff;
+}
+
+.slicknav_nav a {
+  padding: 5px 10px;
+  margin: 2px 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.slicknav_nav a:hover {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #ccc;
+  color: #222;
+}
+
+.slicknav_nav .slicknav_txtnode {
+  margin-left: 15px;
+}
+
+.slicknav_nav .slicknav_item a {
+  padding: 0;
+  margin: 0;
+}
+
+.slicknav_nav .slicknav_parent-link a {
+  padding: 0;
+  margin: 0;
+}
+
+.slicknav_brand {
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 7px 12px;
+  height: 44px;
+}
+
 /**
  * Nutralife Products
  * http://manik.me
@@ -5,10 +215,10 @@
  * Copyright (c) 2017 MD Sultan N.
  * Licensed under the GPLv2+ license.
  */
-$main_color:#cd171e;
-$title_color:#626262;
-$border_color:rgba(0, 0, 0, 0.08);
-.product-banner{
+$main_color: #cd171e;
+$title_color: #626262;
+$border_color: rgba(0, 0, 0, 0.08);
+.product-banner {
   background-color: #fff;
   background-position: center center;
   background-repeat: no-repeat;
@@ -16,85 +226,85 @@ $border_color:rgba(0, 0, 0, 0.08);
   min-height: 250px;
   background-size: cover;
   overflow: hidden;
-  .product-header-banner{
+  .product-header-banner {
     max-width: 100%;
     height: auto;
   }
 }
-.single-product-media{
+
+.single-product-media {
   background-color: #e6e7e8;
   padding: 20px;
   overflow: hidden;
-  .product-media-left{
+  .product-media-left {
     width: 40%;
     float: left;
   }
 
-  .product-media-right{
+  .product-media-right {
     padding-left: 5%;
     width: 55%;
     float: left;
   }
 
-  .product-title-link{
-    &:hover{
+  .product-title-link {
+    &:hover {
       color: inherit;
       text-decoration: none;
     }
   }
-  .product-media-title{
+  .product-media-title {
     color: $main_color;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.4em;
     text-transform: uppercase;
   }
-  .product-media-sizes{
+  .product-media-sizes {
     font-size: 0.9em;
     font-weight: 600;
     text-transform: uppercase;
   }
 
-  .single-product-thumb{
+  .single-product-thumb {
     width: 100% !important;
     height: auto;
   }
 
-  &.product-loop{
+  &.product-loop {
     min-height: 400px;
     background-color: transparent !important;
-    .product-media-title{
+    .product-media-title {
       font-size: 1em;
     }
-    .product-short-description{
+    .product-short-description {
       width: 100% !important;
       max-width: none;
     }
-    .product-read-more-btn{
+    .product-read-more-btn {
       font-size: 1em;
     }
   }
-  &.single{
-    .product-media-title{
+  &.single {
+    .product-media-title {
       font-weight: 600;
     }
   }
 }
 
-
-.product-description{
+.product-description {
   color: $title_color !important;
-  &>h2{
+  & > h2 {
     margin-top: 0;
     color: $title_color !important;
   }
-  h2{
+  h2 {
     font-size: 2em;
     font-weight: 400;
     text-transform: uppercase;
     color: $title_color !important;
   }
-  h3{
+  h3 {
     font-size: 1.2em;
     line-height: 1.3em;
     padding: 0;
@@ -104,10 +314,10 @@ $border_color:rgba(0, 0, 0, 0.08);
   }
 }
 
-.single-product-meta{
+.single-product-meta {
   margin-top: 30px;
-  ul{
-    li{
+  ul {
+    li {
       color: $main_color;
       font-size: 1.2em;
       font-weight: 400;
@@ -129,7 +339,7 @@ $border_color:rgba(0, 0, 0, 0.08);
   font-size: 1.2em;
   font-weight: 400;
   transition: all 0.6s;
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $main_color;
     border-color: $main_color;
@@ -151,22 +361,22 @@ $border_color:rgba(0, 0, 0, 0.08);
   font-weight: 400;
   color: $main_color;
   transition: all 0.6s;
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $main_color;
     border-color: $main_color;
   }
 }
 
-.taxonomy-label-wrapper{
-  .taxonomy-label{
+.taxonomy-label-wrapper {
+  .taxonomy-label {
     text-transform: uppercase;
     color: $main_color;
     font-size: 1.1em;
     font-weight: 600;
     text-align: center;
     letter-spacing: 0px;
-    i{
+    i {
       margin-left: 8px;
       font-weight: 600;
       font-size: 1.5em;
@@ -175,22 +385,23 @@ $border_color:rgba(0, 0, 0, 0.08);
     }
   }
 }
-.taxonomy-list{
+
+.taxonomy-list {
   list-style: none;
   padding-left: 0;
   margin-left: 0 !important;
-  li{
+  li {
     list-style: none;
     padding-left: 0;
-    a{
+    a {
       text-transform: uppercase;
       font-weight: 600;
       color: #4c4d4f;
       transition: all 0.6s;
-      &.active{
+      &.active {
         color: $main_color;
       }
-      &:hover{
+      &:hover {
         text-decoration: none;
         color: $main_color;
       }
@@ -209,7 +420,7 @@ $border_color:rgba(0, 0, 0, 0.08);
   margin-bottom: 10px;
   display: inline-table;
   font-weight: 600;
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $main_color;
   }
@@ -228,79 +439,87 @@ $border_color:rgba(0, 0, 0, 0.08);
   padding-right: 20px;
   border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
-.taxonomy-meta-wrapper{
-  background-color: $main_color;
+
+.taxonomy-meta-wrapper {
+  //background-color: $main_color;
   overflow: hidden;
   margin-bottom: 20px;
 }
-.taxonomy-meta{
+
+.taxonomy-meta {
   background-color: $main_color;
   color: #fff;
   text-align: center;
   padding: 40px 20px;
-  .taxonomy-meta-title{
+  .taxonomy-meta-title {
     color: inherit;
     font-weight: 600;
     text-transform: uppercase;
   }
 }
 
-.taxonomy-meta-image{
+.taxonomy-meta-image {
   line-height: 1;
   margin: 0;
   padding: 0;
-  .img{
+  .img {
     line-height: 1;
     margin: 0;
     padding: 0;
   }
 }
-.breadcrumbs{
+
+.breadcrumbs {
   margin-bottom: 30px;
 }
-.trail-items{
-  .trail-item::after{
+
+.trail-items {
+  .trail-item::after {
     padding: 0 0.2em;
   }
-  .trail-item, a{
+  .trail-item, a {
     text-transform: uppercase;
     color: $title_color;
     font-weight: 400;
 
-    &:hover{
+    &:hover {
       text-decoration: none;
       color: $main_color;
     }
   }
-  .trail-end{
+  .trail-end {
     color: #000 !important;
   }
 }
-.mb0{
+
+.mb0 {
   margin-bottom: 0 !important;
 }
 
-.pb0{
-  padding-bottom:0 !important;
+.pb0 {
+  padding-bottom: 0 !important;
 }
-.mb-30{
+
+.mb-30 {
   margin-bottom: 30px !important;
 }
-.mt30{
+
+.mt30 {
   margin-top: 30px !important;
 }
+
 .related-blog-wrapper {
   min-height: 154px;
   position: relative;
-  a{
+  a {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index:99;
+    z-index: 99;
   }
-  .related-blog-title{
+  .related-blog-title {
     font-size: 1em;
     text-align: left;
     width: 90%;
@@ -313,9 +532,9 @@ $border_color:rgba(0, 0, 0, 0.08);
     color: #fff;
     z-index: 9;
 
-    &:after{
+    &:after {
       content: '';
-      //border-top: 4px solid $main_color;
+      border-top: 4px solid $main_color;
       position: absolute;
       bottom: -20px;
       width: 30%;
@@ -324,15 +543,16 @@ $border_color:rgba(0, 0, 0, 0.08);
     }
   }
 }
-.taxonomy-banner{
+
+.taxonomy-banner {
   position: relative;
   overflow: hidden;
   max-height: 450px;
-  .container{
+  .container {
     position: relative;
     overflow: hidden;
   }
-  .taxonomy-banner-image{
+  .taxonomy-banner-image {
     max-width: 100%;
     height: auto;
   }
@@ -345,14 +565,14 @@ $border_color:rgba(0, 0, 0, 0.08);
     transform: translate(-50%, -50%);
   }
 
- .taxonomy-banner-title {
+  .taxonomy-banner-title {
     text-transform: uppercase;
     font-size: 3.5em;
     font-weight: 600;
     color: #fff;
     margin-bottom: 30px;
   }
-  p{
+  p {
     color: #fff;
     font-weight: 400;
     font-size: 1.2em;
@@ -360,16 +580,17 @@ $border_color:rgba(0, 0, 0, 0.08);
   }
 
 }
+
 .taxonomy-meta-desc {
   text-align: left;
-  a{
+  a {
     border: 1px solid #fff;
     line-height: 1;
     padding: 6px 30px;
     margin: 10px 10px 10px 0;
     display: inline-block;
     color: #fff;
-    &:hover{
+    &:hover {
       text-decoration: none;
       color: #fff;
     }
@@ -377,37 +598,40 @@ $border_color:rgba(0, 0, 0, 0.08);
 }
 
 .blog-overlay {
-  background: rgba(00,00,00,.4);
+  background: rgba(00, 00, 00, .4);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-#Top_bar.is-sticky{
-  z-index:999999 !important;
+
+#Top_bar.is-sticky {
+  z-index: 999999 !important;
 }
-.tax-title-link{
- text-align: center;
-  .tax-title{
+
+.tax-title-link {
+  text-align: center;
+  .tax-title {
     font-size: 1.2em;
     color: $main_color;
     line-height: 1.3em;
     font-weight: 600;
     min-height: 42px;
-    text-transform: uppercase;
   }
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $main_color;
   }
 }
-.breadcrumbs-wrap{
-  .breadcrumbs{
+
+.breadcrumbs-wrap {
+  .breadcrumbs {
     margin-bottom: 30px;
   }
 }
-.non-popular-tax-title-link{
+
+.non-popular-tax-title-link {
   font-size: 1em;
   color: $main_color;
   line-height: 1.1em;
@@ -416,18 +640,19 @@ $border_color:rgba(0, 0, 0, 0.08);
   padding: 5px 30px;
   margin: 5px 4px;
   display: inline-block;
-  text-transform: uppercase;
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $main_color;
   }
 }
-.tax-image-link{
-  img{
+
+.tax-image-link {
+  img {
     max-height: 230px !important;
     width: auto !important;
   }
 }
+
 .nutralife-popular-taxonomy {
   padding: 70px 0 0 0;
   overflow: visible;
@@ -442,45 +667,63 @@ $border_color:rgba(0, 0, 0, 0.08);
   color: #fff;
   font-weight: 600;
   font-size: 1.3em;
-  &:after{
+  &:after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     right: 0;
     top: 0;
-    border-bottom: 41px solid #fff;
+    border-bottom: 41px solid #e6e7e8;
     border-left: 12px solid transparent;
   }
 }
 
+.js .slicknav_menu {
+  display: none;
+}
 
-.align_center{
+.align_center {
   text-align: center;
 }
+.related-blog-wrapper {
+  height: 150px;
+}
+
 @media only screen and (min-width: 960px) {
-  .no-gutter{
+  .no-gutter {
+    position: relative;
+    overflow: hidden;
+    max-height: 373px;
     .column{
       width: 50% !important;
       margin: 0 !important;
     }
   }
-  .product-description{
+  .taxonomy-meta-image .taxonomy-meta-thumb {
+    min-height: 373px !important;
+  }
+  .no-gutter .column:first-child {
+    background-color: #cd171e;
+    padding-bottom: 100%;
+  }
+
+  .product-description {
     padding-left: 30px;
   }
-  .product-short-description{
+  .product-short-description {
     max-width: 70%;
   }
   .single-product-media.related-product {
-    min-height: 400px;
+    min-height: 366px;
   }
 
-  .double-cols-parent{
+  .double-cols-parent {
     overflow: hidden;
-    .pager_wrapper{
+    .pager_wrapper {
       margin-bottom: 20px;
     }
-    .three-fourth{
+    .three-fourth {
       min-height: 600px;
     }
     //&>.column{ padding-bottom: 99999px; margin-bottom: -99999px;}
@@ -488,22 +731,87 @@ $border_color:rgba(0, 0, 0, 0.08);
   }
 }
 
-.single-product-media.related-product{
-  .product-media-left, .product-media-right{
+.single-product-media.related-product {
+  .product-media-left, .product-media-right {
     width: 100%;
     float: none;
     clear: both;
     padding: 0 !important;
   }
-  .single-product-thumb{
+  .single-product-thumb {
     max-height: 250px;
     width: auto !important;
     margin: 0 auto;
     display: block;
   }
-  .product-media-title{
+  .product-media-title {
     font-size: 1em;
     line-height: 1.7em;
     margin-top: 20px;
+  }
+}
+.taxonomy-banner .taxonomy-banner-text {
+  z-index: 9;
+}
+
+.related-blog-wrapper {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 960px) {
+  .product-banner, .taxonomy-banner {
+    max-height: auto !important;
+    min-height: auto !important;
+  }
+  .product-page-title, .related-product-title {
+    line-height: 1.2;
+  }
+  .single-product-media.product-loop {
+    min-height: auto !important;
+  }
+  .no-gutter .column {
+    width: 100% !important;
+    clear: both;
+  }
+  .one-second.column {
+    width: 75%;
+  }
+  .taxonomy-meta-wrapper {
+    background-image: none !important;
+    background-size: contain;
+    background: transparent;
+    .taxonomy-meta-image {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .column {
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .taxonomy-banner p {
+    display: none;
+  }
+  .taxonomy-banner .taxonomy-banner-title {
+    font-size: 1.5em;
+  }
+  .js .slicknav_menu {
+    display: block;
+  }
+  #Content {
+    .double-cols-parent {
+      .column {
+        width: 100%;
+        clear: both;
+        float: none;
+      }
+    }
+    .taxonomy-list {
+      display: none;
+    }
   }
 }

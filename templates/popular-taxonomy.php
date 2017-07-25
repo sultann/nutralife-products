@@ -1,5 +1,5 @@
 <div class="nutralife-popular-taxonomy align_center">
-    <div class="popular-category-label"><?php _e('Popular category', 'nutralife_product' );?></div>
+    <div class="popular-category-label"><?php _e('MOST POPULAR', 'nutralife_product' );?></div>
 	<div class="sections_group">
 		<?php
 		$popular_taxs = nutralife_get_popular_tax();
