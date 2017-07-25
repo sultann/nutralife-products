@@ -1,213 +1,3 @@
-/*!
- * SlickNav Responsive Mobile Menu v1.0.10
- * (c) 2016 Josh Cope
- * licensed under MIT
- */
-.slicknav_btn {
-  position: relative;
-  display: block;
-  vertical-align: middle;
-  float: right;
-  padding: 0.438em 0.625em 0.438em 0.625em;
-  line-height: 1.125em;
-  cursor: pointer;
-}
-
-.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
-  margin-top: 0.188em;
-}
-
-.slicknav_menu {
-  *zoom: 1;
-}
-
-.slicknav_menu .slicknav_menutxt {
-  display: block;
-  line-height: 1.188em;
-  float: left;
-}
-
-.slicknav_menu .slicknav_icon {
-  float: left;
-  width: 1.125em;
-  height: 0.875em;
-  margin: 0.188em 0 0 0.438em;
-}
-
-.slicknav_menu .slicknav_icon:before {
-  background: transparent;
-  width: 1.125em;
-  height: 0.875em;
-  display: block;
-  content: "";
-  position: absolute;
-}
-
-.slicknav_menu .slicknav_no-text {
-  margin: 0;
-}
-
-.slicknav_menu .slicknav_icon-bar {
-  display: block;
-  width: 1.125em;
-  height: 0.125em;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.slicknav_menu:before {
-  content: " ";
-  display: table;
-}
-
-.slicknav_menu:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.slicknav_nav {
-  clear: both;
-}
-
-.slicknav_nav ul {
-  display: block;
-}
-
-.slicknav_nav li {
-  display: block;
-}
-
-.slicknav_nav .slicknav_arrow {
-  font-size: 0.8em;
-  margin: 0 0 0 0.4em;
-}
-
-.slicknav_nav .slicknav_item {
-  cursor: pointer;
-}
-
-.slicknav_nav .slicknav_item a {
-  display: inline;
-}
-
-.slicknav_nav .slicknav_row {
-  display: block;
-}
-
-.slicknav_nav a {
-  display: block;
-}
-
-.slicknav_nav .slicknav_parent-link a {
-  display: inline;
-}
-
-.slicknav_brand {
-  float: left;
-}
-
-.slicknav_menu {
-  font-size: 16px;
-  box-sizing: border-box;
-  background: #4c4c4c;
-  padding: 5px;
-}
-
-.slicknav_menu * {
-  box-sizing: border-box;
-}
-
-.slicknav_menu .slicknav_menutxt {
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 0 1px 3px #000;
-}
-
-.slicknav_menu .slicknav_icon-bar {
-  background-color: #fff;
-}
-
-.slicknav_btn {
-  margin: 5px 5px 6px;
-  text-decoration: none;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #222;
-}
-
-.slicknav_nav {
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  font-size: 0.875em;
-  list-style: none;
-  overflow: hidden;
-}
-
-.slicknav_nav ul {
-  list-style: none;
-  overflow: hidden;
-  padding: 0;
-  margin: 0 0 0 20px;
-}
-
-.slicknav_nav .slicknav_row {
-  padding: 5px 10px;
-  margin: 2px 5px;
-}
-
-.slicknav_nav .slicknav_row:hover {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  background: #ccc;
-  color: #fff;
-}
-
-.slicknav_nav a {
-  padding: 5px 10px;
-  margin: 2px 5px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.slicknav_nav a:hover {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  background: #ccc;
-  color: #222;
-}
-
-.slicknav_nav .slicknav_txtnode {
-  margin-left: 15px;
-}
-
-.slicknav_nav .slicknav_item a {
-  padding: 0;
-  margin: 0;
-}
-
-.slicknav_nav .slicknav_parent-link a {
-  padding: 0;
-  margin: 0;
-}
-
-.slicknav_brand {
-  color: #fff;
-  font-size: 18px;
-  line-height: 30px;
-  padding: 7px 12px;
-  height: 44px;
-}
-
 /**
  * Nutralife Products
  * http://manik.me
@@ -509,8 +299,9 @@ $border_color: rgba(0, 0, 0, 0.08);
 }
 
 .related-blog-wrapper {
-  min-height: 154px;
+  height: 168px;
   position: relative;
+  overflow: hidden;
   a {
     position: absolute;
     top: 0;
@@ -518,6 +309,10 @@ $border_color: rgba(0, 0, 0, 0.08);
     width: 100%;
     height: 100%;
     z-index: 99;
+  }
+  img{
+    width: 100% !important;
+    height: 100% !important;
   }
   .related-blog-title {
     font-size: 1em;
@@ -538,8 +333,8 @@ $border_color: rgba(0, 0, 0, 0.08);
       position: absolute;
       bottom: -20px;
       width: 30%;
-      display: inline-block;
-      text-align: center;
+      left: 50%;
+      transform: translate(-50%);
     }
   }
 }
@@ -571,6 +366,7 @@ $border_color: rgba(0, 0, 0, 0.08);
     font-weight: 600;
     color: #fff;
     margin-bottom: 30px;
+    line-height: 1.2;
   }
   p {
     color: #fff;
@@ -686,10 +482,14 @@ $border_color: rgba(0, 0, 0, 0.08);
 .align_center {
   text-align: center;
 }
-.related-blog-wrapper {
-  height: 150px;
+.mobile-menu-wrapper{
+  display: none;
 }
-
+.breadcrumbs-mobile-tax-wrapper{
+  .taxonomy-list-wrapper{
+    display: none;
+  }
+}
 @media only screen and (min-width: 960px) {
   .no-gutter {
     position: relative;
@@ -778,7 +578,7 @@ $border_color: rgba(0, 0, 0, 0.08);
   }
   .taxonomy-meta-wrapper {
     background-image: none !important;
-    background-size: contain;
+    background-size: 50% 100%;
     background: transparent;
     .taxonomy-meta-image {
       display: block;
@@ -787,8 +587,70 @@ $border_color: rgba(0, 0, 0, 0.08);
       }
     }
   }
-  .column {
-    margin: 0 !important;
+  .taxonomy-banner p{
+    display: none;
+  }
+  .taxonomy-list-column{
+    display: none;
+    &+div{
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  .mobile-menu-wrapper {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-right: 30px;
+    position: relative;
+    .tax-responsive-menu-toggle{
+      font-size: 22px;
+      line-height: 34px;
+      color: $main_color;
+    }
+    .tax-mobile-menu-label{
+      margin-top: -5px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 5px;
+    }
+    &+nav{
+      display: inline-block;
+      vertical-align: text-top;
+      margin-top: -3px;
+    }
+  }
+  .taxonomy-list-wrapper{
+    height: auto !important;
+    position: absolute;
+    display: none;
+    top: 30px;
+    margin-top: .5em;
+    background: #fff;
+    min-width: 12em;
+    border-radius: 0 0 .2em .2em;
+    z-index: 0;
+    padding: 10px;
+    box-shadow: 4px 4px 7px rgba(00,00,00, 0.3);
+    .taxonomy-list{
+      display: block;
+    }
+    .taxonomy-label{
+      i{
+        display: none !important; ;
+      }
+    }
+  }
+
+  .menu-active{
+    .taxonomy-list-wrapper{
+      display: block;
+      z-index: 99;
+    }
+    .taxonomy-list{
+      display: block !important;
+    }
   }
 }
 
@@ -813,5 +675,11 @@ $border_color: rgba(0, 0, 0, 0.08);
     .taxonomy-list {
       display: none;
     }
+  }
+}
+
+@media only screen and (max-width: 460px){
+  .mobile-menu-wrapper{
+    margin-bottom: 10px;
   }
 }

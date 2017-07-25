@@ -13,19 +13,32 @@ window.Nutralife_Products = (function(window, document, $, undefined){
 	'use strict';
 
 	var app = {};
-
-    $('#taxonomy-nav-menu').slicknav({
-        appendTo:$('.taxonomy-label-wrapper')
-    });
 	app.init = function() {
-        var winWidth = $(window).width();
-        if(winWidth>760){
-            var rightPanel = $('.double-cols-parent').find('.three-fourth').height();
-            // console.log(rightPanel);
-            // var height = $('.taxonomy-list-wrapper').closest('.column').outerHeight();
-            $('.taxonomy-list-wrapper').css('height', (rightPanel-20)+'px');
+        adjust_tax_height();
+	    function adjust_tax_height() {
+            var winWidth = $(window).width();
+            if(winWidth>760){
+                var rightPanel = $('.double-cols-parent').find('.three-fourth').height();
+                // console.log(rightPanel);
+                // var height = $('.taxonomy-list-wrapper').closest('.column').outerHeight();
+                $('.taxonomy-list-wrapper').css('height', (rightPanel-20)+'px');
+            }
         }
+        $(window).on('resize', function () {
+            adjust_tax_height();
+        });
+
+	    var tax_menu =$('.taxonomy-list-wrapper').clone(true);
+        tax_menu.appendTo('.breadcrumbs-mobile-tax-wrapper');
+        $('.tax-responsive-menu-toggle ').on('click', function () {
+           $('.breadcrumbs-mobile-tax-wrapper').toggleClass('menu-active');
+            $('.breadcrumbs-mobile-tax-wrapper li').find('a').on('click', function () {
+                $('.breadcrumbs-mobile-tax-wrapper').toggleClass('menu-active');
+            });
+           return false;
+        });
 	};
+
 
 
 
